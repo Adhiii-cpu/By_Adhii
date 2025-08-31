@@ -2,19 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome My Amul ❤️</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Amul ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #ff1493;
+    }
+
+    .letter-box {
+      width: 80%;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .reply-btn {
+      display: inline-block;
+      background: #ff69b4;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .reply-btn:hover {
+      background: #ff1493;
+    }
+
+    .reply-box {
+      display: none;
+      margin-top: 20px;
+    }
+    .reply-box textarea {
+      width: 100%;
+      height: 100px;
+      border: 2px solid #ffb6c1;
+      border-radius: 15px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .reply-box button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 15px;
+      background: #ff69b4;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .videos {
+      margin: 30px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .videos video {
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      margin: 30px 0;
+      font-size: 14px;
+      color: #ff1493;
+    }
+  </style>
 </head>
-<body class="login-body">
-  <div class="login-box">
-    <h2>Hi Nikiiiii 💕</h2>
-    <p>Kindly enter Sweetee name to continue</p>
-    <form onsubmit="return login(event)">
-      <input type="text" id="username" placeholder="User ID" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
+<body>
+
+  <audio autoplay loop>
+    <source src="assets/song.mp3" type="audio/mp3">
+  </audio>
+
+  <header>For My Amul ❤️</header>
+
+  <!-- Love Letter -->
+  <div class="letter-box">
+    <p>My dearest Amul,</p>
+    <p>
+      From the very first day we met, you became the most special part of my life.  
+      Every smile of yours feels like sunshine, every word you speak feels like music,  
+      and every moment with you is a memory I want to keep forever.  
+    </p>
+    <p>
+      This little page is just a small way to tell you how much you mean to me.  
+      No distance, no time, and no situation can ever reduce the love I carry for you.  
+      You are my strength, my happiness, and my forever. 💕
+    </p>
+    <p>
+      Yours always,  
+      <br> Adithya 💖
+    </p>
+
+    <!-- Accept Button -->
+    <div class="reply-btn" onclick="openReply()">Accept Amul</div>
+
+    <!-- Reply Box -->
+    <div class="reply-box" id="replyBox">
+      <textarea id="replyText" placeholder="Write your reply here..."></textarea>
+      <button onclick="saveReply()">Send</button>
+      <p id="savedReply" style="margin-top:15px; color:#d63384; font-weight:bold;"></p>
+    </div>
   </div>
-  <script src="script.js"></script>
+
+  <!-- Videos Section -->
+  <div class="videos">
+    <video controls>
+      <source src="assets/video1.mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="assets/video2.mp4" type="video/mp4">
+    </video>
+    <video controls>
+      <source src="assets/video3.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <footer>
+    Made with ❤️ by Your Adithiii for My Nikiiii ✨
+  </footer>
+
+  <script>
+    function openReply() {
+      document.getElementById("replyBox").style.display = "block";
+    }
+    function saveReply() {
+      let reply = document.getElementById("replyText").value;
+      if (reply.trim() !== "") {
+        document.getElementById("savedReply").innerText = "Her Reply: " + reply;
+        document.getElementById("replyText").disabled = true;
+      }
+    }
+  </script>
+
 </body>
 </html>
