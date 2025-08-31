@@ -1,0 +1,79 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffe6f0, #fff);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #d63384;
+}
+
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px pink;
+}
+
+input, button, textarea {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid pink;
+}
+
+button {
+  background: #ff80bf;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d63384;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.center-content {
+  margin-top: 20%;
+}
+
+.letter-box {
+  background: rgba(255,255,255,0.85);
+  margin: 50px auto;
+  padding: 30px;
+  width: 70%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px pink;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.gallery img, .gallery video {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ff99cc;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #ff3385;
+}
